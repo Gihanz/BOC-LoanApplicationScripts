@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="StyleSheet" type="text/css" href="js/dojo/dijit/themes/tundra/tundra.css">
+    <script type="text/javascript">
+      var djConfig = {
+        baseScriptUri : "js/dojo/",
+        parseOnLoad : true
+      };
+    </script>
+    <script type="text/javascript" src="js/dojo/dojo/dojo.js"></script>
+    <script>
+            dojo.require("dijit.form.Button");
+            dojo.require("dijit.form.CheckBox");
+    </script>
+  </head>
+  <body class="tundra">
+    <div name="confirmation" dojoType="dijit.form.CheckBox">
+        <script type="dojo/method" event="onClick" args="evt">
+          if (this.checked)
+            dijit.byId("signup").setAttribute('disabled', false);
+          else
+            dijit.byId("signup").setAttribute('disabled', true);
+        </script>
+    </div>Text.<br>
+    <button id="signup" disabled dojoType="dijit.form.Button" type="submit">Button</button>
+     
+</body>
+</html>

@@ -1,0 +1,46 @@
+[{
+	"symbolicName": "ClaimNumber",
+	"required": true
+},
+{
+	"symbolicName": "DocWorkStatus",
+	"displayMode": "readonly",
+	"value": "Complete"
+},
+{
+	"symbolicName": "ItemDescription",
+	"required": true
+},
+{
+	"symbolicName": "ClaimCategory",
+	"required": true,
+	"hasDependentProperties": true,
+	"choiceList": {
+		"displayName": "Claim Categories",
+		"choices": [{
+			"displayName": "Claim",
+			"value": "Claim"
+		}]
+	}
+},
+{
+	"symbolicName": "DocumentType",
+	"required": true,
+	"dependentOn": "ClaimCategory",
+	"dependentValue": "Claim",
+	"choiceList": {
+		"displayName": "Document Types",
+		"choices": [{
+			"displayName": "Correspondence",
+			"value": "Correspondence"
+		},
+		{
+			"displayName": "Discovery",
+			"value": "Discovery"
+		},
+		{
+			"displayName": "Pleadings",
+			"value": "Pleadings"
+		}]
+	}
+}]
